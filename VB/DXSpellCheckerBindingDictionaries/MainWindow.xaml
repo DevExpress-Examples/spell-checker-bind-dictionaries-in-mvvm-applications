@@ -1,0 +1,32 @@
+﻿<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/spellchecker"
+        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+        x:Class="DXSpellCheckerBindingDictionaries.MainWindow"
+        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+        xmlns:ViewModel="clr-namespace:DXSpellCheckerBindingDictionaries.ViewModel"
+        mc:Ignorable="d"
+        Title="TextEdit with SpellChecker" 
+        Height="350" 
+        Width="525">
+    <Window.DataContext>
+        <ViewModel:MainViewModel/>
+    </Window.DataContext>
+    <Grid>
+        <!--region #xaml-->
+        <dxe:TextEdit x:Name="textEdit1"
+                      Text=" Jeder hat das Regcht, am kulturelen Leben der Gemeinschaft frei teilzunehmen, sich an den Künsten zu erfreuen und am wissenschaftlichen Fortschritt und dessen Errungenschaften teilzuhaben."
+                      TextWrapping="Wrap"
+                      dxsch:SpellingSettings.DictionarySourceCollection="{Binding Dictionaries,UpdateSourceTrigger=PropertyChanged}">
+            <dxmvvm:Interaction.Behaviors>
+                <dxsch:DXSpellChecker Culture="de-DE" 
+                                      CheckAsYouType="True" 
+                                      SpellingFormType="Word" 
+                                      ShowSpellCheckMenu="True"/>
+            </dxmvvm:Interaction.Behaviors>
+        </dxe:TextEdit>
+        <!--endregion #xaml-->
+    </Grid>
+</Window>
