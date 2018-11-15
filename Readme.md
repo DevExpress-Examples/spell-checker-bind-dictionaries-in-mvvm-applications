@@ -1,3 +1,10 @@
+<!-- default file list -->
+*Files to look at*:
+
+* [MainWindow.xaml](./CS/DXSpellCheckerBindingDictionaries/MainWindow.xaml) (VB: [MainWindow.xaml.vb](./VB/DXSpellCheckerBindingDictionaries/MainWindow.xaml.vb))
+* [MainWindow.xaml.cs](./CS/DXSpellCheckerBindingDictionaries/MainWindow.xaml.cs) (VB: [MainWindow.xaml.vb](./VB/DXSpellCheckerBindingDictionaries/MainWindow.xaml.vb))
+* [MainViewModel.cs](./CS/DXSpellCheckerBindingDictionaries/ViewModel/MainViewModel.cs) (VB: [MainViewModel.vb](./VB/DXSpellCheckerBindingDictionaries/ViewModel/MainViewModel.vb))
+<!-- default file list end -->
 # How to bind dictionaries to the Spell Checker in MVVM applications
 
 
