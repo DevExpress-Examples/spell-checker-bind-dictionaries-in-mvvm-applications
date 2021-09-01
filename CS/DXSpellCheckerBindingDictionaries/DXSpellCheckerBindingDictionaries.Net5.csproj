@@ -1,0 +1,45 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <TargetFramework>net5.0-windows</TargetFramework>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>DXSpellCheckerBindingDictionaries</RootNamespace>
+    <AssemblyName>DXSpellCheckerBindingDictionaries</AssemblyName>
+    <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
+    <UseWindowsForms>true</UseWindowsForms>
+    <UseWPF>true</UseWPF>
+    <Platforms>x86;AnyCPU</Platforms>
+    <CopyLocalLockFileAssemblies>false</CopyLocalLockFileAssemblies>
+    <DefaultItemExcludes>obj*/**</DefaultItemExcludes>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System.ServiceModel" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Update="ViewModel\MainViewModel.cs">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Dictionaries\de_DE.aff">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Dictionaries\de_DE.dic">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Dictionaries\Alphabet.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="DevExpress.Data" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Data.Desktop" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Mvvm" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Printing.Core" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.SpellChecker.Core" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Core" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.SpellChecker" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Themes.All" Version="21.1.*-*" />
+  </ItemGroup>
+</Project>
