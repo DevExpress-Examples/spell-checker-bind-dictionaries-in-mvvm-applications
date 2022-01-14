@@ -7,6 +7,7 @@
         x:Class="DXSpellCheckerBindingDictionaries.MainWindow"
         xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
         xmlns:ViewModel="clr-namespace:DXSpellCheckerBindingDictionaries.ViewModel"
+        xmlns:dxspch="clr-namespace:DevExpress.Xpf.SpellChecker;assembly=DevExpress.Xpf.SpellChecker.v21.2"
         mc:Ignorable="d"
         Title="TextEdit with SpellChecker" 
         Height="350" 
