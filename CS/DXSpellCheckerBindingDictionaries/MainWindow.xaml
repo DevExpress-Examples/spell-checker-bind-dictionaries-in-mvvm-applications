@@ -19,14 +19,16 @@
         <dxe:TextEdit x:Name="textEdit1"
                       Text=" Jeder hat das Regcht, am kulturelen Leben der Gemeinschaft frei teilzunehmen, sich an den Künsten zu erfreuen und am wissenschaftlichen Fortschritt und dessen Errungenschaften teilzuhaben."
                       TextWrapping="Wrap"
-                      dxsch:SpellingSettings.DictionarySourceCollection="{Binding Dictionaries,UpdateSourceTrigger=PropertyChanged}">
-            <dxmvvm:Interaction.Behaviors>
-                <dxsch:DXSpellChecker Culture="de-DE" 
-                                      CheckAsYouType="True" 
-                                      SpellingFormType="Word" 
-                                      ShowSpellCheckMenu="True"/>
-            </dxmvvm:Interaction.Behaviors>
-        </dxe:TextEdit>
+                      VerticalContentAlignment="Top"
+                      dxsch:SpellingSettings.DictionarySourceCollection="{Binding Dictionaries,UpdateSourceTrigger=PropertyChanged}"/>
+
+        <dxspch:SpellingSettings.SpellChecker>
+            <Binding Path="SpellChecker"/>
+        </dxspch:SpellingSettings.SpellChecker>
+        <dxspch:SpellingSettings.CheckAsYouType>True</dxspch:SpellingSettings.CheckAsYouType>
+        <dxspch:SpellingSettings.ShowSpellCheckMenu>True</dxspch:SpellingSettings.ShowSpellCheckMenu>
+        <dxspch:SpellingSettings.UnderlineColor>Red</dxspch:SpellingSettings.UnderlineColor>
+        <dxspch:SpellingSettings.UnderlineStyle>WavyLine</dxspch:SpellingSettings.UnderlineStyle>
         <!--endregion #xaml-->
     </Grid>
 </Window>
