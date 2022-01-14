@@ -11,7 +11,6 @@ namespace DXSpellCheckerBindingDictionaries.ViewModel
     {
         public virtual DictionarySourceCollection Dictionaries { get; set; }
         public virtual SpellChecker SpellChecker { get; set; }
-
         public MainViewModel()
         {
             Dictionaries = GetDictionaries();
@@ -19,6 +18,7 @@ namespace DXSpellCheckerBindingDictionaries.ViewModel
             SpellChecker.SpellingFormType = DevExpress.XtraSpellChecker.SpellingFormType.Word;
             SpellChecker.SpellCheckMode = DevExpress.XtraSpellChecker.SpellCheckMode.AsYouType;
             SpellChecker.Culture = new CultureInfo("de-DE");
+
         }
 
         public DictionarySourceCollection GetDictionaries()
