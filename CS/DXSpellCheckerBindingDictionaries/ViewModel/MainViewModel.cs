@@ -27,8 +27,8 @@ namespace DXSpellCheckerBindingDictionaries.ViewModel
 
             var dictionary = new HunspellDictionarySource();
             dictionary.Culture = new CultureInfo("de-DE");            
-            dictionary.DictionaryUri = new Uri(@"pack://application:,,,/DXSpellCheckerBindingDictionaries;component//Dictionaries/de_DE.dic");
-            dictionary.GrammarUri = new Uri(@"pack://application:,,,/DXSpellCheckerBindingDictionaries;component//Dictionaries/de_DE.aff");
+            dictionary.DictionaryUri = new Uri(@"pack://application:,,,/DXSpellCheckerBindingDictionaries;component/Dictionaries/de_DE.dic");
+            dictionary.GrammarUri = new Uri(@"pack://application:,,,/DXSpellCheckerBindingDictionaries;component/Dictionaries/de_DE.aff");
             collection.Add(dictionary);
             return collection;
         }
