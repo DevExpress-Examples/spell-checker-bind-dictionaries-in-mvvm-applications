@@ -18,7 +18,7 @@
     <Grid>
         <!--region #xaml-->
         <dxe:TextEdit x:Name="textEdit1"
-                      Text=" Jeder hat das Regcht, am kulturelen Leben der Gemeinschaft frei teilzunehmen, sich an den K?nsten zu erfreuen und am wissenschaftlichen Fortschritt und dessen Errungenschaften teilzuhaben."
+                      Text=" Jeder hat das Regcht, am kulturelen Leben der Gemeinschaft frei teilzunehmen, sich an den Künsten zu erfreuen und am wissenschaftlichen Fortschritt und dessen Errungenschaften teilzuhaben."
                       TextWrapping="Wrap"
                       VerticalContentAlignment="Top"
                       dxsch:SpellingSettings.DictionarySourceCollection="{Binding Dictionaries,UpdateSourceTrigger=PropertyChanged}"/>
