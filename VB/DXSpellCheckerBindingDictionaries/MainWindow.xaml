@@ -7,6 +7,7 @@
         x:Class="DXSpellCheckerBindingDictionaries.MainWindow"
         xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
         xmlns:ViewModel="clr-namespace:DXSpellCheckerBindingDictionaries.ViewModel"
+        xmlns:dxspch="clr-namespace:DevExpress.Xpf.SpellChecker;assembly=DevExpress.Xpf.SpellChecker.v21.1"
         mc:Ignorable="d"
         Title="TextEdit with SpellChecker" 
         Height="350" 
@@ -17,16 +18,18 @@
     <Grid>
         <!--region #xaml-->
         <dxe:TextEdit x:Name="textEdit1"
-                      Text=" Jeder hat das Regcht, am kulturelen Leben der Gemeinschaft frei teilzunehmen, sich an den Künsten zu erfreuen und am wissenschaftlichen Fortschritt und dessen Errungenschaften teilzuhaben."
+                      Text=" Das Regcht hat viele Funktionem. Die wichtigste darunter ist die Sicherung des Friedens im Lande."
                       TextWrapping="Wrap"
-                      dxsch:SpellingSettings.DictionarySourceCollection="{Binding Dictionaries,UpdateSourceTrigger=PropertyChanged}">
-            <dxmvvm:Interaction.Behaviors>
-                <dxsch:DXSpellChecker Culture="de-DE" 
-                                      CheckAsYouType="True" 
-                                      SpellingFormType="Word" 
-                                      ShowSpellCheckMenu="True"/>
-            </dxmvvm:Interaction.Behaviors>
-        </dxe:TextEdit>
+                      VerticalContentAlignment="Top"
+                      dxsch:SpellingSettings.DictionarySourceCollection="{Binding Dictionaries,UpdateSourceTrigger=PropertyChanged}"/>
+
+        <dxspch:SpellingSettings.SpellChecker>
+            <Binding Path="SpellChecker"/>
+        </dxspch:SpellingSettings.SpellChecker>
+        <dxspch:SpellingSettings.CheckAsYouType>True</dxspch:SpellingSettings.CheckAsYouType>
+        <dxspch:SpellingSettings.ShowSpellCheckMenu>True</dxspch:SpellingSettings.ShowSpellCheckMenu>
+        <dxspch:SpellingSettings.UnderlineColor>Red</dxspch:SpellingSettings.UnderlineColor>
+        <dxspch:SpellingSettings.UnderlineStyle>WavyLine</dxspch:SpellingSettings.UnderlineStyle>
         <!--endregion #xaml-->
     </Grid>
 </Window>
