@@ -5,7 +5,7 @@
 <!-- default badges end -->
 # How to bind dictionaries to the Spell Checker in MVVM applications
 
-The following code sample shows how to use the [SpellingSettings.DictionarySourceCollection](https://docs.devexpress.com/WPF/DevExpress.Xpf.SpellChecker.SpellingSettings.DictionarySourceCollection) property to bind dictionaries generated at runtime to the SpellCheker. In this example, the [TextEdit](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.TextEdit) control is used to display text. The dictionary collection is generated in the ViewModel.
+This example demonstrates how to use the [SpellingSettings.DictionarySourceCollection](https://docs.devexpress.com/WPF/DevExpress.Xpf.SpellChecker.SpellingSettings.DictionarySourceCollection) property to bind dictionaries generated at runtime to the Spell Checker. In this example, the [TextEdit](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.TextEdit) control is used to display text. The dictionary collection is generated in the ViewModel.
 
 <!-- default file list -->
 ## Files to Look At
