@@ -4,7 +4,7 @@
 <!-- default badges end -->
 # Spell Checker for WPF - Bind Dictionaries at Runtime
 
-This example demonstrates how to use the [SpellingSettings.DictionarySourceCollection](https://docs.devexpress.com/WPF/DevExpress.Xpf.SpellChecker.SpellingSettings.DictionarySourceCollection) property to bind dictionaries to the [Spell Checker](https://docs.devexpress.com/WPF/DevExpress.Xpf.SpellChecker.SpellChecker). The dictionary collection is generated in the ViewModel. The Spell Checker is integrated into the [TextEdit](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.TextEdit) control.
+This example demonstrates how to use the [SpellingSettings.DictionarySourceCollection](https://docs.devexpress.com/WPF/DevExpress.Xpf.SpellChecker.SpellingSettings.DictionarySourceCollection) property to bind dictionaries to the [Spell Checker](https://docs.devexpress.com/WPF/DevExpress.Xpf.SpellChecker.SpellChecker). The dictionary collection is generated in the ViewModel, and the Spell Checker is integrated into the [TextEdit](https://docs.devexpress.com/WPF/DevExpress.Xpf.Editors.TextEdit) control.
 
 <!-- default file list -->
 ## Files to Look At
