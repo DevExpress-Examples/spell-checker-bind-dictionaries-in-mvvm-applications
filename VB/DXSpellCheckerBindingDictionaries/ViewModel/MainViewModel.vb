@@ -15,9 +15,9 @@ Namespace DXSpellCheckerBindingDictionaries.ViewModel
         Public Overridable Property SpellChecker As SpellChecker
 
         Public Sub New()
-            ' Create a SpellChecker instance.
+            ' Create a SpellChecker class instance.
             SpellChecker = New SpellChecker()
-            ' Specify the SpellChecker's proterties.
+            ' Specify the SpellChecker's properties.
             SpellChecker.SpellingFormType = SpellingFormType.Word
             SpellChecker.SpellCheckMode = SpellCheckMode.AsYouType
             SpellChecker.Culture = New CultureInfo("de-DE")
