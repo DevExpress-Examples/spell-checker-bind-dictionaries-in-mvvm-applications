@@ -3,8 +3,8 @@ Imports System.Globalization
 #Region "#usings"
 Imports DevExpress.Xpf.SpellChecker
 Imports DevExpress.XtraSpellChecker
-
 #End Region  ' #usings
+
 Namespace DXSpellCheckerBindingDictionaries.ViewModel
 
 #Region "#ViewModel"
