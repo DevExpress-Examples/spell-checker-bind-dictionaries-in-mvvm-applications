@@ -1,19 +1,17 @@
-﻿using DevExpress.Mvvm.POCO;
-using System;
-using System.Globalization;
-using DevExpress.Mvvm.DataAnnotations;
-#region #usings
+﻿using DevExpress.Mvvm;
 using DevExpress.Xpf.SpellChecker;
 using DevExpress.XtraSpellChecker;
-#endregion #usings
+using System;
+using System.Globalization;
 
 namespace DXSpellCheckerBindingDictionaries.ViewModel
 {
-    #region #ViewModel
     public class MainViewModel
     {
         public virtual DictionarySourceCollection Dictionaries { get; set; }
         public virtual SpellChecker SpellChecker { get; set; }
+
+        protected virtual IMessageBoxService MessageBoxService { get { return null; } }
 
         public MainViewModel()
         {
@@ -25,6 +23,22 @@ namespace DXSpellCheckerBindingDictionaries.ViewModel
             SpellChecker.Culture = new CultureInfo("de-DE");
             // Obtain a dictionary collection.
             Dictionaries = GetDictionaries();
+
+            // Subscribe to events
+            SpellChecker.RepeatedWordFound += SpellChecker_RepeatedWordFound;
+            SpellChecker.CheckCompleteFormShowing += SpellChecker_CheckCompleteFormShowing;
+
+        }
+
+        private void SpellChecker_CheckCompleteFormShowing(object sender, FormShowingEventArgs e)
+        {
+            e.Handled = true;
+            MessageBoxService.Show("That's It!");
+        }
+
+        private void SpellChecker_RepeatedWordFound(object sender, RepeatedWordFoundEventArgs e)
+        {
+            e.Result = SpellCheckOperation.Cancel;
         }
 
         public DictionarySourceCollection GetDictionaries()
@@ -41,9 +55,13 @@ namespace DXSpellCheckerBindingDictionaries.ViewModel
             dictionary.GrammarUri = new Uri(@"pack://application:,,,/DXSpellCheckerBindingDictionaries;component/Dictionaries/de_DE.aff");
             // Add the dictionary to the collection.
             collection.Add(dictionary);
+
+            var customDictionary = new SpellCheckerCustomDictionarySource();
+            customDictionary.DictionaryUri = new Uri(@"pack://application:,,,/DXSpellCheckerBindingDictionaries;component/Dictionaries/CustomEnglish.dic");
+            collection.Add(customDictionary);
             return collection;
         }
     }
-    #endregion #ViewModel
 }
+
 
