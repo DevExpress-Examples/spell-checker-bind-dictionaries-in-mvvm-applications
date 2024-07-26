@@ -10,7 +10,6 @@ namespace DXSpellCheckerBindingDictionaries.ViewModel
     {
         public virtual DictionarySourceCollection Dictionaries { get; set; }
         public virtual SpellChecker SpellChecker { get; set; }
-
         protected virtual IMessageBoxService MessageBoxService { get { return null; } }
 
         public MainViewModel()
@@ -32,8 +31,8 @@ namespace DXSpellCheckerBindingDictionaries.ViewModel
 
         private void SpellChecker_CheckCompleteFormShowing(object sender, FormShowingEventArgs e)
         {
-            e.Handled = true;
             MessageBoxService.Show("That's It!");
+            e.Handled = true;
         }
 
         private void SpellChecker_RepeatedWordFound(object sender, RepeatedWordFoundEventArgs e)
@@ -45,10 +44,10 @@ namespace DXSpellCheckerBindingDictionaries.ViewModel
         {
             // Create a dictionary collection.
             var collection = new DictionarySourceCollection();
+            
             // Create a Hunspell spell-checking dictionary.
-            var dictionary = new HunspellDictionarySource();
-            // Specify the dictionary culture settings.
-            dictionary.Culture = new CultureInfo("de-DE");
+            var dictionary = new HunspellDictionarySource() { Culture = new CultureInfo("de-DE") };
+
             // Load the dictionary file.
             dictionary.DictionaryUri = new Uri(@"pack://application:,,,/DXSpellCheckerBindingDictionaries;component/Dictionaries/de_DE.dic");
             // Load the affix file.
@@ -56,8 +55,9 @@ namespace DXSpellCheckerBindingDictionaries.ViewModel
             // Add the dictionary to the collection.
             collection.Add(dictionary);
 
-            var customDictionary = new SpellCheckerCustomDictionarySource();
+            var customDictionary = new SpellCheckerCustomDictionarySource() { Culture = new CultureInfo("EN-us") };
             customDictionary.DictionaryUri = new Uri(@"pack://application:,,,/DXSpellCheckerBindingDictionaries;component/Dictionaries/CustomEnglish.dic");
+            customDictionary.AlphabetUri = new Uri(@"pack://application:,,,/DXSpellCheckerBindingDictionaries;component/Dictionaries/Alphabet.txt");
             collection.Add(customDictionary);
             return collection;
         }

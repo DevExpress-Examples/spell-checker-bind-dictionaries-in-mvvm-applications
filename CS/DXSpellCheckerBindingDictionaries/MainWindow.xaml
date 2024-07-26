@@ -1,32 +1,29 @@
-<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/spellchecker"
-        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
-        x:Class="DXSpellCheckerBindingDictionaries.MainWindow"
-        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
-        xmlns:ViewModel="clr-namespace:DXSpellCheckerBindingDictionaries.ViewModel"
-        xmlns:dxspch="clr-namespace:DevExpress.Xpf.SpellChecker;assembly=DevExpress.Xpf.SpellChecker.v24.1" 
-        xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
-        mc:Ignorable="d"
-        Title="TextEdit with SpellChecker" 
-        Height="350" 
-        Width="525"
-        DataContext="{dxmvvm:ViewModelSource ViewModel:MainViewModel}">
+<dx:ThemedWindow x:Class="DXSpellCheckerBindingDictionaries.MainWindow" 
+                 mc:Ignorable="d" 
+                 Title="TextEdit with SpellChecker" 
+                 Height="350" Width="525" 
+                 DataContext="{dxmvvm:ViewModelSource ViewModel:MainViewModel}"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/spellchecker"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:ViewModel="clr-namespace:DXSpellCheckerBindingDictionaries.ViewModel">
     <dxmvvm:Interaction.Behaviors>
-        <dx:DXMessageBoxService/>
+        <dx:DXMessageBoxService />
     </dxmvvm:Interaction.Behaviors>
-    <Grid dxspch:SpellingSettings.SpellChecker="{Binding SpellChecker}"
-        dxspch:SpellingSettings.CheckAsYouType="True"
-        dxspch:SpellingSettings.ShowSpellCheckMenu="True"
-        dxspch:SpellingSettings.UnderlineColor="Blue"
-        dxspch:SpellingSettings.UnderlineStyle="WavyLine"
-        dxsch:SpellingSettings.DictionarySourceCollection="{Binding Dictionaries, UpdateSourceTrigger=PropertyChanged}">
-        <dxe:TextEdit x:Name="textEdit1"
-                      EditValue=" Das Regcht hat viele Funktionem. Die wichtigste darunter ist die Sicherung des Friedens im Lande."
-                      TextWrapping="Wrap"
-                      VerticalContentAlignment="Top"/>
+    <Grid dxsch:SpellingSettings.SpellChecker="{Binding SpellChecker}" 
+          dxsch:SpellingSettings.CheckAsYouType="True" 
+          dxsch:SpellingSettings.ShowSpellCheckMenu="True" 
+          dxsch:SpellingSettings.UnderlineColor="Blue" 
+          dxsch:SpellingSettings.UnderlineStyle="WavyLine" 
+          dxsch:SpellingSettings.DictionarySourceCollection="{Binding Dictionaries, UpdateSourceTrigger=PropertyChanged}">
+        <dxe:TextEdit x:Name="textEdit1" 
+                      EditValue=" Das Regcht hat viele Funktionem. Die wichtigste darunter ist die Sicherung des Friedens im Lande." 
+                      TextWrapping="Wrap" VerticalContentAlignment="Top" />
 
     </Grid>
-</Window>
+</dx:ThemedWindow>
