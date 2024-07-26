@@ -7,7 +7,7 @@
         x:Class="DXSpellCheckerBindingDictionaries.MainWindow"
         xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
         xmlns:ViewModel="clr-namespace:DXSpellCheckerBindingDictionaries.ViewModel"
-        xmlns:dxspch="clr-namespace:DevExpress.Xpf.SpellChecker;assembly=DevExpress.Xpf.SpellChecker.v24.1" 
+        xmlns:dxspch="clr-namespace:DevExpress.Xpf.SpellChecker;assembly=DevExpress.Xpf.SpellChecker.v21.1" 
         xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
         mc:Ignorable="d"
         Title="TextEdit with SpellChecker" 
@@ -15,7 +15,7 @@
         Width="525"
         DataContext="{dxmvvm:ViewModelSource ViewModel:MainViewModel}">
     <dxmvvm:Interaction.Behaviors>
-        <dx:DXMessageBoxService/>
+        <dx:DXMessageBoxService />
     </dxmvvm:Interaction.Behaviors>
     <Grid dxspch:SpellingSettings.SpellChecker="{Binding SpellChecker}"
         dxspch:SpellingSettings.CheckAsYouType="True"
@@ -26,7 +26,7 @@
         <dxe:TextEdit x:Name="textEdit1"
                       EditValue=" Das Regcht hat viele Funktionem. Die wichtigste darunter ist die Sicherung des Friedens im Lande."
                       TextWrapping="Wrap"
-                      VerticalContentAlignment="Top"/>
+                      VerticalContentAlignment="Top" />
 
     </Grid>
 </Window>
