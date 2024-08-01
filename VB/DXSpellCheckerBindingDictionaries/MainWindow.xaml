@@ -1,35 +1,29 @@
-<Window xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
-        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
-        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/spellchecker"
-        xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
-        x:Class="DXSpellCheckerBindingDictionaries.MainWindow"
-        xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
-        xmlns:ViewModel="clr-namespace:DXSpellCheckerBindingDictionaries.ViewModel"
-        xmlns:dxspch="clr-namespace:DevExpress.Xpf.SpellChecker;assembly=DevExpress.Xpf.SpellChecker.v21.1"
-        mc:Ignorable="d"
-        Title="TextEdit with SpellChecker" 
-        Height="350" 
-        Width="525">
-    <Window.DataContext>
-        <ViewModel:MainViewModel/>
-    </Window.DataContext>
-    <Grid>
-        <!--region #xaml-->
-        <dxe:TextEdit x:Name="textEdit1"
-                      Text=" Das Regcht hat viele Funktionem. Die wichtigste darunter ist die Sicherung des Friedens im Lande."
-                      TextWrapping="Wrap"
-                      VerticalContentAlignment="Top"
-                      dxsch:SpellingSettings.DictionarySourceCollection="{Binding Dictionaries,UpdateSourceTrigger=PropertyChanged}"/>
+<dx:ThemedWindow x:Class="DXSpellCheckerBindingDictionaries.MainWindow" 
+                 mc:Ignorable="d" 
+                 Title="TextEdit with SpellChecker" 
+                 Height="350" Width="525" 
+                 DataContext="{dxmvvm:ViewModelSource ViewModel:MainViewModel}"
+    xmlns:dx="http://schemas.devexpress.com/winfx/2008/xaml/core"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:dxsch="http://schemas.devexpress.com/winfx/2008/xaml/spellchecker"
+    xmlns:dxe="http://schemas.devexpress.com/winfx/2008/xaml/editors"
+    xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
+    xmlns:ViewModel="clr-namespace:DXSpellCheckerBindingDictionaries.ViewModel">
+    <dxmvvm:Interaction.Behaviors>
+        <dx:DXMessageBoxService />
+    </dxmvvm:Interaction.Behaviors>
+    <Grid dxsch:SpellingSettings.SpellChecker="{Binding SpellChecker}" 
+          dxsch:SpellingSettings.CheckAsYouType="True" 
+          dxsch:SpellingSettings.ShowSpellCheckMenu="True" 
+          dxsch:SpellingSettings.UnderlineColor="Blue" 
+          dxsch:SpellingSettings.UnderlineStyle="WavyLine" 
+          dxsch:SpellingSettings.DictionarySourceCollection="{Binding Dictionaries, UpdateSourceTrigger=PropertyChanged}">
+        <dxe:TextEdit x:Name="textEdit1" 
+                      EditValue=" Das Regcht hat viele Funktionem. Die wichtigste darunter ist die Sicherung des Friedens im Lande." 
+                      TextWrapping="Wrap" VerticalContentAlignment="Top" />
 
-        <dxspch:SpellingSettings.SpellChecker>
-            <Binding Path="SpellChecker"/>
-        </dxspch:SpellingSettings.SpellChecker>
-        <dxspch:SpellingSettings.CheckAsYouType>True</dxspch:SpellingSettings.CheckAsYouType>
-        <dxspch:SpellingSettings.ShowSpellCheckMenu>True</dxspch:SpellingSettings.ShowSpellCheckMenu>
-        <dxspch:SpellingSettings.UnderlineColor>Red</dxspch:SpellingSettings.UnderlineColor>
-        <dxspch:SpellingSettings.UnderlineStyle>WavyLine</dxspch:SpellingSettings.UnderlineStyle>
-        <!--endregion #xaml-->
     </Grid>
-</Window>
+</dx:ThemedWindow>

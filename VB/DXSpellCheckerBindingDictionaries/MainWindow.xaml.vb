@@ -1,16 +1,13 @@
-Imports System.Windows
-Imports System.Windows.Controls
-
 Namespace DXSpellCheckerBindingDictionaries
 
     ''' <summary>
     ''' Interaction logic for MainWindow.xaml
     ''' </summary>
     Public Partial Class MainWindow
-        Inherits Window
+        Inherits DevExpress.Xpf.Core.ThemedWindow
 
         Public Sub New()
-            Me.InitializeComponent()
+            InitializeComponent()
         End Sub
     End Class
 End Namespace

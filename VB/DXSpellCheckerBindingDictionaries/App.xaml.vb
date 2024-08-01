@@ -1,4 +1,7 @@
-Imports System.Windows
+Imports System.Configuration
+Imports System.Data
+Imports System.Linq
+Imports System.Threading.Tasks
 
 Namespace DXSpellCheckerBindingDictionaries
 
