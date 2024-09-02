@@ -1,10 +1,10 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OptionInfer>On</OptionInfer>
     <TargetFramework>net5.0-windows</TargetFramework>
     <OutputType>WinExe</OutputType>
-    <RootNamespace>
-    </RootNamespace>
+    <RootNamespace></RootNamespace>
     <AssemblyName>DXSpellCheckerBindingDictionaries</AssemblyName>
     <GenerateAssemblyInfo>false</GenerateAssemblyInfo>
     <UseWindowsForms>true</UseWindowsForms>
@@ -38,13 +38,13 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.Data" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.Data.Desktop" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.Mvvm" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.Printing.Core" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.SpellChecker.Core" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.Wpf.Core" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.Wpf.SpellChecker" Version="21.1.*-*" />
-    <PackageReference Include="DevExpress.Wpf.Themes.All" Version="21.1.*-*" />
+    <PackageReference Include="DevExpress.Data" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Data.Desktop" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Mvvm" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Printing.Core" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.SpellChecker.Core" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Core" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Wpf.SpellChecker" Version="24.2.*-*" />
+    <PackageReference Include="DevExpress.Wpf.Themes.All" Version="24.2.*-*" />
   </ItemGroup>
 </Project>

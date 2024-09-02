@@ -7,13 +7,13 @@
         x:Class="DXSpellCheckerBindingDictionaries.MainWindow"
         xmlns:dxmvvm="http://schemas.devexpress.com/winfx/2008/xaml/mvvm"
         xmlns:ViewModel="clr-namespace:DXSpellCheckerBindingDictionaries.ViewModel"
-        xmlns:dxspch="clr-namespace:DevExpress.Xpf.SpellChecker;assembly=DevExpress.Xpf.SpellChecker.v21.1"
+        xmlns:dxspch="clr-namespace:DevExpress.Xpf.SpellChecker;assembly=DevExpress.Xpf.SpellChecker.v24.2"
         mc:Ignorable="d"
         Title="TextEdit with SpellChecker" 
         Height="350" 
         Width="525">
     <Window.DataContext>
-        <ViewModel:MainViewModel/>
+        <ViewModel:MainViewModel />
     </Window.DataContext>
     <Grid>
         <!--region #xaml-->
@@ -21,10 +21,10 @@
                       Text=" Das Regcht hat viele Funktionem. Die wichtigste darunter ist die Sicherung des Friedens im Lande."
                       TextWrapping="Wrap"
                       VerticalContentAlignment="Top"
-                      dxsch:SpellingSettings.DictionarySourceCollection="{Binding Dictionaries,UpdateSourceTrigger=PropertyChanged}"/>
+                      dxsch:SpellingSettings.DictionarySourceCollection="{Binding Dictionaries,UpdateSourceTrigger=PropertyChanged}" />
 
         <dxspch:SpellingSettings.SpellChecker>
-            <Binding Path="SpellChecker"/>
+            <Binding Path="SpellChecker" />
         </dxspch:SpellingSettings.SpellChecker>
         <dxspch:SpellingSettings.CheckAsYouType>True</dxspch:SpellingSettings.CheckAsYouType>
         <dxspch:SpellingSettings.ShowSpellCheckMenu>True</dxspch:SpellingSettings.ShowSpellCheckMenu>

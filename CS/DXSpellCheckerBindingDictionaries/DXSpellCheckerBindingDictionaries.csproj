@@ -1,3 +1,4 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <TargetFramework>net6.0-windows7.0</TargetFramework>
@@ -38,9 +39,9 @@
     </Resource>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="DevExpress.Data.Desktop" Version="24.1.4" />
-    <PackageReference Include="DevExpress.SpellChecker.Core" Version="24.1.4" />
-    <PackageReference Include="DevExpress.Wpf.Core" Version="24.1.4" />
-    <PackageReference Include="DevExpress.Wpf.SpellChecker" Version="24.1.4" />
+    <PackageReference Include="DevExpress.Data.Desktop" Version="24.2.1-alpha-24207" />
+    <PackageReference Include="DevExpress.SpellChecker.Core" Version="24.2.1-alpha-24207" />
+    <PackageReference Include="DevExpress.Wpf.Core" Version="24.2.1-alpha-24207" />
+    <PackageReference Include="DevExpress.Wpf.SpellChecker" Version="24.2.1-alpha-24207" />
   </ItemGroup>
 </Project>
