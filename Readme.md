@@ -20,7 +20,7 @@ The following code sample shows how to use the <a href="https://documentation.d
 
 
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=spell-checker-bind-dictionaries-in-mvvm-applications&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=spell-checker-bind-dictionaries-in-mvvm-applications&~~~was_helpful=no)
 
